@@ -36,12 +36,12 @@ def get_all_videos(api_key, id_list):
     
     for cid in id_list:
         try:
-            # 1. Get Channel Name
+            # 1. Get Channel Name (FIXED LINE BELOW: Added [0])
             ch_req = youtube.channels().list(part="snippet", id=cid)
             ch_res = ch_req.execute()
             if not ch_res.get('items'):
                 continue
-            channel_name = ch_res['items']['snippet']['title']
+            channel_name = ch_res['items'][0]['snippet']['title']
             
             # 2. Get latest 50 videos from this channel
             search_req = youtube.search().list(
@@ -71,7 +71,7 @@ def get_all_videos(api_key, id_list):
                         'Views': int(v_item['statistics'].get('viewCount', 0)),
                         'Likes': int(v_item['statistics'].get('likeCount', 0)),
                         'Comments': int(v_item['statistics'].get('commentCount', 0)),
-                        'Link': f"https://youtube.com{v_item['id']}"
+                        'Link': f"https://youtube.com/watch?v={v_item['id']}"
                     })
         except Exception as e:
             st.error(f"Error reading channel {cid}: {e}")

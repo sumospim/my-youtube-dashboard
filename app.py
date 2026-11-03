@@ -8,7 +8,7 @@ st.set_page_config(page_title="Multi-Channel YouTube Dashboard", layout="wide")
 st.title("📊 Multi-Channel YouTube Analytics Hub")
 
 # Securely grab API key from Streamlit Cloud Secrets
-API_KEY = st.secrets.get("YOUTUBE_API_KEY", "YOUR_LOCAL_API_KEY_HERE")
+API_KEY = "AizaSyBH7K7rtWUHQtldCj6JqfyHwrDOww5iEbw"
 
 # 2. Easy UI Input for Channel IDs
 st.sidebar.header("⚙️ Dashboard Controls")

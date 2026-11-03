@@ -8,7 +8,7 @@ st.set_page_config(page_title="Multi-Channel YouTube Dashboard", layout="wide")
 st.title("📊 Multi-Channel YouTube Analytics Hub")
 
 # !!! PASTE YOUR GOOGLE API KEY INSIDE THE QUOTES BELOW !!!
-API_KEY = "PASTE_YOUR_ACTUAL_GOOGLE_KEY_HERE"
+API_KEY = "AizaSyBH7K7rtWUHQtldCj6JqfyHwrDOww5iEbw"
 
 # 2. Easy UI Input for Channel IDs
 st.sidebar.header("⚙️ Dashboard Controls")

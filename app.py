@@ -7,8 +7,8 @@ import plotly.express as px
 st.set_page_config(page_title="Multi-Channel YouTube Dashboard", layout="wide")
 st.title("📊 Multi-Channel YouTube Analytics Hub")
 
-# Securely grab API key from Streamlit Cloud Secrets
-API_KEY = "AizaSyBH7K7rtWUHQtldCj6JqfyHwrDOww5iEbw"
+# !!! PASTE YOUR GOOGLE API KEY INSIDE THE QUOTES BELOW !!!
+API_KEY = "PASTE_YOUR_ACTUAL_GOOGLE_KEY_HERE"
 
 # 2. Easy UI Input for Channel IDs
 st.sidebar.header("⚙️ Dashboard Controls")
@@ -43,8 +43,8 @@ def get_multi_channel_stats(api_key, id_list):
     return pd.DataFrame(all_data)
 
 # 3. Build UI Layout
-if API_KEY == "YOUR_LOCAL_API_KEY_HERE" or not API_KEY:
-    st.warning("Please configure your YouTube API Key in Streamlit Secrets.")
+if API_KEY == "AizaSyBH7K7rtWUHQtldCj6JqfyHwrDOww5iEbw" or not API_KEY:
+    st.warning("Please replace 'PASTE_YOUR_ACTUAL_GOOGLE_KEY_HERE' on line 10 of your app.py with your real Google key.")
 elif not channel_ids:
     st.info("Please type or paste at least one Channel ID in the sidebar.")
 else:

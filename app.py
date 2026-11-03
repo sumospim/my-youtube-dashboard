@@ -7,7 +7,7 @@ st.set_page_config(page_title="Multi-Channel YouTube Dashboard", layout="wide")
 st.title("📊 Multi-Channel YouTube Analytics Hub")
 
 # Put your real API key between the quotes below
-API_KEY = "AizaSyBH7K7rtWUHQtldCj6JqfyHwrDOww5iEbw"
+API_KEY = "AIzaSyA7Ufwzrb6MW5_YGOm3-QfmgPFnim6cnpg"
 
 st.sidebar.header("⚙️ Dashboard Controls")
 id_input = st.sidebar.text_area(
